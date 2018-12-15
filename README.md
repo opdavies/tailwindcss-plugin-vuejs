@@ -25,3 +25,11 @@ You can add the plugin to your Tailwind config as follows:
 ```
 require('tailwindcss-vuejs')()
 ```
+
+## Example
+
+To see an example of this plugin in use, see the [oliverdavies.uk repository](https://github.com/opdavies/oliverdavies.uk).
+
+## Author
+
+[Oliver Davies](https://www.oliverdavies.uk) - Full Stack Developer
