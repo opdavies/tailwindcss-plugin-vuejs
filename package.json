@@ -1,5 +1,5 @@
 {
-  "name": "tailwind-vuejs",
+  "name": "tailwindcss-vuejs",
   "version": "1.0.0",
   "description": "A Tailwind CSS plugin for adding classes to work with Vue.js.",
   "main": "index.js",
