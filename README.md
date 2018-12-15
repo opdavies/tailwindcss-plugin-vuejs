@@ -10,7 +10,7 @@ This plugin adds classes for showing and hiding elements in different display va
 
 Add this plugin to your project:
 
-```
+```sh
 # Using npm
 npm install --save-dev tailwindcss-vuejs
 
@@ -24,7 +24,7 @@ You can add the plugin to your Tailwind config as follows:
 
 ```js
 plugins: [
-  ...
+  // ...
   require('tailwindcss-vuejs')(),
 ],
 ```
