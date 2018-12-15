@@ -1,0 +1,16 @@
+{
+  "name": "tailwind-vuejs",
+  "version": "1.0.0",
+  "description": "A Tailwind CSS plugin for adding classes to work with Vue.js.",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "tailwind css",
+    "tailwind"
+  ],
+  "author": "Oliver Davies",
+  "license": "MIT"
+}
