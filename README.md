@@ -22,8 +22,11 @@ yarn add --dev tailwindcss-vuejs
 
 You can add the plugin to your Tailwind config as follows:
 
-```
-require('tailwindcss-vuejs')()
+```js
+plugins: [
+  ...
+  require('tailwindcss-vuejs')(),
+],
 ```
 
 ## Example
