@@ -8,8 +8,10 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "tailwind css",
-    "tailwind"
+    "tailwind",
+    "tailwind-css",
+    "tailwindcss",
+    "tailwindcss-plugin"
   ],
   "author": "Oliver Davies",
   "license": "MIT"
