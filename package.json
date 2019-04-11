@@ -3,7 +3,6 @@
   "version": "1.1.2",
   "description": "A Tailwind CSS plugin for adding classes to work with Vue.js.",
   "main": "index.js",
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -21,5 +20,13 @@
   "bugs": {
     "url": "https://github.com/opdavies/tailwindcss-vuejs/issues"
   },
-  "homepage": "https://github.com/opdavies/tailwindcss-vuejs#readme"
+  "homepage": "https://github.com/opdavies/tailwindcss-vuejs#readme",
+  "dependencies": {
+    "postcss": "^7.0.14",
+    "tailwindcss": "^1.0.0-beta.4"
+  },
+  "devDependencies": {
+    "jest": "^24.7.1",
+    "jest-matcher-css": "^1.0.3"
+  }
 }
