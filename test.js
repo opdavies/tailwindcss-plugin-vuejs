@@ -1,4 +1,3 @@
-const _ = require('lodash')
 const cssMatcher = require('jest-matcher-css')
 const defaultConfig = require('tailwindcss/defaultConfig')
 const plugin = require('./index.js')
