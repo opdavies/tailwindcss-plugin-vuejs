@@ -34,11 +34,11 @@ test('it generates block classes', () => {
   return generatePluginCss({ options: ['block'] }).then(css => {
     expect(css).toMatchCss(`
       [v-cloak] .v-cloak-block {
-        display: block;
+        display: block
       }
 
       .v-cloak-block {
-        display: none;
+        display: none
       }
     `)
   })
@@ -48,7 +48,7 @@ test('it generates hidden classes', () => {
   return generatePluginCss({ options: ['hidden'] }).then(css => {
     expect(css).toMatchCss(`
       [v-cloak] .v-cloak-hidden {
-        display: none;
+        display: none
       }
     `)
   })
@@ -58,11 +58,11 @@ test('it generates flex classes', () => {
   return generatePluginCss({ options: ['flex'] }).then(css => {
     expect(css).toMatchCss(`
       [v-cloak] .v-cloak-flex {
-        display: flex;
+        display: flex
       }
 
       .v-cloak-flex {
-        display: none;
+        display: none
       }
     `)
   })
@@ -72,11 +72,11 @@ test('it generates inline classes', () => {
   return generatePluginCss({ options: ['inline'] }).then(css => {
     expect(css).toMatchCss(`
       [v-cloak] .v-cloak-inline {
-        display: inline;
+        display: inline
       }
 
       .v-cloak-inline {
-        display: none;
+        display: none
       }
     `)
   })
@@ -86,11 +86,11 @@ test('it generates inline block classes', () => {
   return generatePluginCss({ options: ['inline-block'] }).then(css => {
     expect(css).toMatchCss(`
       [v-cloak] .v-cloak-inline-block {
-        display: inline-block;
+        display: inline-block
       }
 
       .v-cloak-inline-block {
-        display: none;
+        display: none
       }
     `)
   })
@@ -100,11 +100,11 @@ test('it generates inline flex classes', () => {
   return generatePluginCss({ options: ['inline-flex'] }).then(css => {
     expect(css).toMatchCss(`
       [v-cloak] .v-cloak-inline-flex {
-        display: inline-flex;
+        display: inline-flex
       }
 
       .v-cloak-inline-flex {
-        display: none;
+        display: none
       }
     `)
   })
@@ -114,7 +114,7 @@ test('it generates invisible classes', () => {
   return generatePluginCss({ options: ['invisible'] }).then(css => {
     expect(css).toMatchCss(`
       [v-cloak] .v-cloak-invisible {
-        visibility: hidden;
+        visibility: hidden
       }
     `)
   })
