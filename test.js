@@ -5,16 +5,10 @@ const plugin = require('./index.js')
 const postcss = require('postcss')
 const tailwindcss = require('tailwindcss')
 
-const disableCorePlugins = () => {
-  return _.mapValues(defaultConfig.variants, plugin => {
-    return false
-  })
-}
-
 const generatePluginCss = (options = {}) => {
   return postcss(
     tailwindcss({
-      corePlugins: disableCorePlugins(),
+      corePlugins: false,
       plugins: [plugin(options)],
     })
   )
