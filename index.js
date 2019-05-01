@@ -36,7 +36,7 @@ module.exports = ({
     ? options
     : _.keys(defaultOptions)
 
-  addUtilities(_.flattenDeep(_.map(selectedOptions, option => {
+  addUtilities(_.chain(selectedOptions).map(option => {
     return defaultOptions[option]
-  })))
+  }).flattenDeep().value())
 }
