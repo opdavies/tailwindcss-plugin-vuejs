@@ -14,9 +14,7 @@ const generatePluginCss = (options = {}) => {
   .process('@tailwind utilities;', {
     from: undefined,
   })
-  .then(result => {
-    return result.css;
-  })
+  .then(result => result.css)
 };
 
 expect.extend({
