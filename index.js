@@ -29,9 +29,7 @@ const defaultOptions = {
   }
 }
 
-module.exports = ({
-  options = [],
-} = {}) => ({ addUtilities }) => {
+module.exports = ({ options = [] }) => ({ addUtilities }) => {
   const selectedOptions = !_.isEmpty(options)
     ? options
     : _.keys(defaultOptions)
