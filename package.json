@@ -7,7 +7,7 @@
     "test": "jest"
   },
   "repository": {
-    "url": "https://github.com/opdavies/tailwindcss-vuejs"
+    "url": "https://github.com/opdavies/tailwindcss-plugin-vuejs"
   },
   "keywords": [
     "tailwind",
@@ -18,9 +18,9 @@
   "author": "Oliver Davies",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/opdavies/tailwindcss-vuejs/issues"
+    "url": "https://github.com/opdavies/tailwindcss-plugin-vuejs/issues"
   },
-  "homepage": "https://github.com/opdavies/tailwindcss-vuejs#readme",
+  "homepage": "https://github.com/opdavies/tailwindcss-plugin-vuejs#readme",
   "dependencies": {
     "postcss": "^7.0.14",
     "tailwindcss": "^1.0.0-beta.5"
