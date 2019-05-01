@@ -1,4 +1,4 @@
-# Vue.js Tailwind CSS plugin
+# Tailwind CSS Plugin: Vue.js
 
 ## Overview
 
