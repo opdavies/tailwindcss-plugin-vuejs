@@ -6,7 +6,11 @@ module.exports = ({ options = [] }) => ({ addUtilities }) => {
     ? options
     : _.keys(defaultOptions)
 
-  addUtilities(_.chain(selectedOptions).map(option => {
-    return defaultOptions[option]
-  }).flattenDeep().value())
+    const utilities = _.chain(selectedOptions)
+      .map(option => {
+        return defaultOptions[option]
+      })
+      .flattenDeep()
+
+    addUtilities(utilities.value())
 }
