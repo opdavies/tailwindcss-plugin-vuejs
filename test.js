@@ -4,7 +4,7 @@ const plugin = require('./index.js')
 const postcss = require('postcss')
 const tailwindcss = require('tailwindcss')
 
-const generatePluginCss = (options = {}) => {
+function generatePluginCss(options = {}) {
   return postcss(
     tailwindcss({
       corePlugins: false,
@@ -15,7 +15,7 @@ const generatePluginCss = (options = {}) => {
     from: undefined,
   })
   .then(result => result.css)
-};
+}
 
 expect.extend({
   toMatchCss: cssMatcher,
