@@ -14,7 +14,6 @@ function generatePluginCss(options = {}) {
   .process('@tailwind utilities;', {
     from: undefined,
   })
-  .then(result => result.css)
 }
 
 expect.extend({
@@ -22,8 +21,8 @@ expect.extend({
 })
 
 test('it generates block classes', () => {
-  generatePluginCss({ options: ['block'] }).then(css => {
-    expect(css).toMatchCss(`
+  generatePluginCss({ options: ['block'] }).then(result => {
+    expect(result.css).toMatchCss(`
       [v-cloak] .v-cloak-block {
         display: block
       }
@@ -36,8 +35,8 @@ test('it generates block classes', () => {
 })
 
 test('it generates hidden classes', () => {
-  generatePluginCss({ options: ['hidden'] }).then(css => {
-    expect(css).toMatchCss(`
+  generatePluginCss({ options: ['hidden'] }).then(result => {
+    expect(result.css).toMatchCss(`
       [v-cloak] .v-cloak-hidden {
         display: none
       }
@@ -46,8 +45,8 @@ test('it generates hidden classes', () => {
 })
 
 test('it generates flex classes', () => {
-  generatePluginCss({ options: ['flex'] }).then(css => {
-    expect(css).toMatchCss(`
+  generatePluginCss({ options: ['flex'] }).then(result => {
+    expect(result.css).toMatchCss(`
       [v-cloak] .v-cloak-flex {
         display: flex
       }
@@ -60,8 +59,8 @@ test('it generates flex classes', () => {
 })
 
 test('it generates inline classes', () => {
-  generatePluginCss({ options: ['inline'] }).then(css => {
-    expect(css).toMatchCss(`
+  generatePluginCss({ options: ['inline'] }).then(result => {
+    expect(result.css).toMatchCss(`
       [v-cloak] .v-cloak-inline {
         display: inline
       }
@@ -74,8 +73,8 @@ test('it generates inline classes', () => {
 })
 
 test('it generates inline block classes', () => {
-  generatePluginCss({ options: ['inline-block'] }).then(css => {
-    expect(css).toMatchCss(`
+  generatePluginCss({ options: ['inline-block'] }).then(result => {
+    expect(result.css).toMatchCss(`
       [v-cloak] .v-cloak-inline-block {
         display: inline-block
       }
@@ -88,8 +87,8 @@ test('it generates inline block classes', () => {
 })
 
 test('it generates inline flex classes', () => {
-  generatePluginCss({ options: ['inline-flex'] }).then(css => {
-    expect(css).toMatchCss(`
+  generatePluginCss({ options: ['inline-flex'] }).then(result => {
+    expect(result.css).toMatchCss(`
       [v-cloak] .v-cloak-inline-flex {
         display: inline-flex
       }
@@ -102,8 +101,8 @@ test('it generates inline flex classes', () => {
 })
 
 test('it generates invisible classes', () => {
-  generatePluginCss({ options: ['invisible'] }).then(css => {
-    expect(css).toMatchCss(`
+  generatePluginCss({ options: ['invisible'] }).then(result => {
+    expect(result.css).toMatchCss(`
       [v-cloak] .v-cloak-invisible {
         visibility: hidden
       }
