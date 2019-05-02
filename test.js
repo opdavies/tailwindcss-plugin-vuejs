@@ -4,7 +4,7 @@ const plugin = require('./index.js')
 const postcss = require('postcss')
 const tailwindcss = require('tailwindcss')
 
-function generatePluginCss(options = {}) {
+function run(options = {}) {
   return postcss(
     tailwindcss({
       corePlugins: false,
@@ -31,7 +31,7 @@ test('it generates block classes', () => {
     }
   `
 
-  generatePluginCss({ options: ['block'] }).then(result => {
+  run({ options: ['block'] }).then(result => {
     expect(result.css).toMatchCss(output)
   })
 })
@@ -43,7 +43,7 @@ test('it generates hidden classes', () => {
     }
   `
 
-  generatePluginCss({ options: ['hidden'] }).then(result => {
+  run({ options: ['hidden'] }).then(result => {
     expect(result.css).toMatchCss(output)
   })
 })
@@ -59,7 +59,7 @@ test('it generates flex classes', () => {
     }
   `
 
-  generatePluginCss({ options: ['flex'] }).then(result => {
+  run({ options: ['flex'] }).then(result => {
     expect(result.css).toMatchCss(output)
   })
 })
@@ -75,7 +75,7 @@ test('it generates inline classes', () => {
     }
   `
 
-  generatePluginCss({ options: ['inline'] }).then(result => {
+  run({ options: ['inline'] }).then(result => {
     expect(result.css).toMatchCss(output)
   })
 })
@@ -91,7 +91,7 @@ test('it generates inline block classes', () => {
     }
   `
 
-  generatePluginCss({ options: ['inline-block'] }).then(result => {
+  run({ options: ['inline-block'] }).then(result => {
     expect(result.css).toMatchCss(output)
   })
 })
@@ -107,7 +107,7 @@ test('it generates inline flex classes', () => {
     }
   `
 
-  generatePluginCss({ options: ['inline-flex'] }).then(result => {
+  run({ options: ['inline-flex'] }).then(result => {
     expect(result.css).toMatchCss(output)
   })
 })
@@ -119,7 +119,7 @@ test('it generates invisible classes', () => {
     }
   `
 
-  generatePluginCss({ options: ['invisible'] }).then(result => {
+  run({ options: ['invisible'] }).then(result => {
     expect(result.css).toMatchCss(output)
   })
 })
