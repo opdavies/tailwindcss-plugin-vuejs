@@ -1,20 +1,6 @@
 const cssMatcher = require('jest-matcher-css')
-const defaultConfig = require('tailwindcss/defaultConfig')
 const plugin = require('./index.js')
-const postcss = require('postcss')
-const tailwindcss = require('tailwindcss')
-
-function run(options = {}) {
-  return postcss(
-    tailwindcss({
-      corePlugins: false,
-      plugins: [plugin(options)],
-    })
-  )
-  .process('@tailwind utilities;', {
-    from: undefined,
-  })
-}
+const { generateUtilities } = require('tailwindcss-plugin-test-helpers')
 
 expect.extend({
   toMatchCss: cssMatcher,
@@ -31,8 +17,9 @@ test('it generates block classes', () => {
     }
   `
 
-  run({ options: ['block'] }).then(result => {
+  generateUtilities(plugin, { options: ['block'] }).then(result => {
     expect(result.css).toMatchCss(output)
+    expect(result.warnings().length).toBe(0)
   })
 })
 
@@ -43,8 +30,9 @@ test('it generates hidden classes', () => {
     }
   `
 
-  run({ options: ['hidden'] }).then(result => {
+  generateUtilities(plugin, { options: ['hidden'] }).then(result => {
     expect(result.css).toMatchCss(output)
+    expect(result.warnings().length).toBe(0)
   })
 })
 
@@ -59,8 +47,9 @@ test('it generates flex classes', () => {
     }
   `
 
-  run({ options: ['flex'] }).then(result => {
+  generateUtilities(plugin, { options: ['flex'] }).then(result => {
     expect(result.css).toMatchCss(output)
+    expect(result.warnings().length).toBe(0)
   })
 })
 
@@ -75,8 +64,9 @@ test('it generates inline classes', () => {
     }
   `
 
-  run({ options: ['inline'] }).then(result => {
+  generateUtilities(plugin, { options: ['inline'] }).then(result => {
     expect(result.css).toMatchCss(output)
+    expect(result.warnings().length).toBe(0)
   })
 })
 
@@ -91,8 +81,9 @@ test('it generates inline block classes', () => {
     }
   `
 
-  run({ options: ['inline-block'] }).then(result => {
+  generateUtilities(plugin, { options: ['inline-block'] }).then(result => {
     expect(result.css).toMatchCss(output)
+    expect(result.warnings().length).toBe(0)
   })
 })
 
@@ -107,8 +98,9 @@ test('it generates inline flex classes', () => {
     }
   `
 
-  run({ options: ['inline-flex'] }).then(result => {
+  generateUtilities(plugin, { options: ['inline-flex'] }).then(result => {
     expect(result.css).toMatchCss(output)
+    expect(result.warnings().length).toBe(0)
   })
 })
 
@@ -119,7 +111,8 @@ test('it generates invisible classes', () => {
     }
   `
 
-  run({ options: ['invisible'] }).then(result => {
+  generateUtilities(plugin, { options: ['invisible'] }).then(result => {
     expect(result.css).toMatchCss(output)
+    expect(result.warnings().length).toBe(0)
   })
 })
